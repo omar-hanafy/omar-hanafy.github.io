@@ -44517,7 +44517,7 @@ B.b.Z(r)
 B.b.B(r,s.e)},
 $S:0}
 A.aeK.prototype={
-$0(){return A.am_("https:www.github.com/omar-hanafy/enefty_icons")},
+$0(){return A.am_("https://www.github.com/omar-hanafy/enefty_icons")},
 $S:0}
 A.aeL.prototype={
 $1(a){this.a.aeH(a)},
