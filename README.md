@@ -12,7 +12,7 @@ Enefty Icons is a Flutter package that provides a collection of icon assets desi
 
 ### [Flutter Helper Utils](./flutter-helper-utils):
 
-Website that provide documentationf or my [flutter_helper_utils]([flutter_helper_utils | Flutter Package (pub.dev)](https://pub.dev/packages/flutter_helper_utils)) package.
+Website that provide documentationf or my [flutter_helper_utils](https://pub.dev/packages/flutter_helper_utils) package.
 
 ## Support Me
 
