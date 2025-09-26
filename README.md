@@ -6,7 +6,11 @@ Hello there! I'm Omar Hanafy, a software developer with a focus on Flutter and D
 
 ### [Enefty Icons](./enefty-icons)
 
-Enefty Icons is a Flutter package that provides a collection of icon assets designed by Pickolab Studio. It features two styles of icons: Outline and Bold. Check out the [Enefty Icons package](https://pub.dev/packages/enefty_icons) for more details.
+- Enefty Icons is a Flutter package that provides a collection of icon assets designed by Pickolab Studio. It features two styles of icons: Outline and Bold. Check out the [Enefty Icons package](https://pub.dev/packages/enefty_icons) for more details.
+
+### [Resizable Splitter](./resizable-splitter)
+
+- Preview for the [resizable_splitter](https://pub.dev/packages/resizable_splitter) package for building drag-to-resize layouts that feel native on every platform.
 
 ## Documentation Sites:
 
