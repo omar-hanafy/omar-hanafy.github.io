@@ -1,6 +1,6 @@
 {
-    "name": "viewport_focus_example",
-    "short_name": "viewport_focus_example",
+    "name": "scroll_spy_example",
+    "short_name": "scroll_spy_example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
