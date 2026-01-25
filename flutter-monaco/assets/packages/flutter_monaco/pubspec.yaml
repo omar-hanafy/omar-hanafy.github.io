@@ -1,0 +1,61 @@
+name: flutter_monaco
+description: Integrate Monaco Editor (VS Code's editor) in Flutter apps. Features 100+ languages, syntax highlighting, themes, and full API.
+version: 1.4.0
+homepage: https://github.com/omar-hanafy/flutter_monaco
+repository: https://github.com/omar-hanafy/flutter_monaco
+issue_tracker: https://github.com/omar-hanafy/flutter_monaco/issues
+documentation: https://github.com/omar-hanafy/flutter_monaco#readme
+
+topics:
+  - vscode
+  - monaco
+  - editor
+  - markdown
+  - ide
+
+platforms:
+  android:
+  ios:
+  macos:
+  windows:
+  web:
+  # linux: # Not yet supported (no webview support yet)
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.29.0"
+
+dependencies:
+  convert_object: ^1.0.4
+  flutter:
+    sdk: flutter
+  freezed_annotation: ^3.1.0
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  web: ^1.1.1
+  webview_flutter: ^4.13.1
+  webview_windows: ^0.4.0
+
+dev_dependencies:
+  build_runner: ^2.10.5
+  flutter_lints: 6.0.0
+  flutter_test:
+    sdk: flutter
+  freezed: ^3.2.4
+  path_provider_platform_interface: ^2.1.2
+
+flutter:
+  assets:
+    - assets/github.svg
+    - pubspec.yaml
+    - assets/monaco/
+    - assets/monaco/min/
+    - assets/monaco/min/vs/
+    - assets/monaco/min/vs/assets/
+    - assets/monaco/min/vs/editor/
+    - assets/monaco/min/vs/basic-languages/
+    - assets/monaco/min/vs/language/
+    - assets/monaco/min/vs/language/css/
+    - assets/monaco/min/vs/language/html/
+    - assets/monaco/min/vs/language/json/
+    - assets/monaco/min/vs/language/typescript/
