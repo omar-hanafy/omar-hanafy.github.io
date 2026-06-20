@@ -441,13 +441,6 @@ class CompiledApp {
       _1330: () => typeof dartUseDateNowForTicks !== "undefined",
       _1331: () => 1000 * performance.now(),
       _1332: () => Date.now(),
-      _1333: () => {
-        // On browsers return `globalThis.location.href`
-        if (globalThis.location != null) {
-          return globalThis.location.href;
-        }
-        return null;
-      },
       _1335: () => new WeakMap(),
       _1336: (map, o) => map.get(o),
       _1337: (map, o, v) => map.set(o, v),
@@ -783,16 +776,14 @@ class CompiledApp {
       _4011: x0 => x0.userAgent,
       _4062: x0 => x0.data,
       _4065: x0 => x0.source,
+      _6223: x0 => x0.baseURI,
       _6224: x0 => x0.isConnected,
       _6240: () => globalThis.document,
       _6654: (x0,x1) => { x0.id = x1 },
       _10791: (x0,x1) => { x0.backgroundColor = x1 },
       _10837: (x0,x1) => { x0.border = x1 },
-      _11115: (x0,x1) => { x0.display = x1 },
       _11279: (x0,x1) => { x0.height = x1 },
-      _11545: (x0,x1) => { x0.overscrollBehavior = x1 },
       _11603: (x0,x1) => { x0.pointerEvents = x1 },
-      _11899: (x0,x1) => { x0.touchAction = x1 },
       _11969: (x0,x1) => { x0.width = x1 },
 
     };
