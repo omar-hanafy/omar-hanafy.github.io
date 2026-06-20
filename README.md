@@ -4,6 +4,10 @@ Hello there! I'm Omar Hanafy, a software developer with a focus on Flutter and D
 
 ## Projects
 
+### [Flutter Monaco](./flutter-monaco)
+
+- Live demo for the [flutter_monaco](https://pub.dev/packages/flutter_monaco) package - embed Monaco, the editor that powers VS Code, inside your Flutter app. Try the playground with 100+ languages, theming, IntelliSense, and live diagnostics.
+
 ### [Enefty Icons](./enefty-icons)
 
 - Enefty Icons is a Flutter package that provides a collection of icon assets designed by Pickolab Studio. It features two styles of icons: Outline and Bold. Check out the [Enefty Icons package](https://pub.dev/packages/enefty_icons) for more details.
