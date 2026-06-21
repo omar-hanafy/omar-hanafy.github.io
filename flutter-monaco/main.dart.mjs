@@ -441,6 +441,18 @@ class CompiledApp {
       _1330: () => typeof dartUseDateNowForTicks !== "undefined",
       _1331: () => 1000 * performance.now(),
       _1332: () => Date.now(),
+      _1333: () => {
+        // On browsers return `globalThis.location.href`
+        if (globalThis.location != null) {
+          return globalThis.location.href;
+        }
+        return null;
+      },
+      _1334: () => {
+        return typeof process != "undefined" &&
+               Object.prototype.toString.call(process) == "[object process]" &&
+               process.platform == "win32"
+      },
       _1335: () => new WeakMap(),
       _1336: (map, o) => map.get(o),
       _1337: (map, o, v) => map.set(o, v),
@@ -670,11 +682,22 @@ class CompiledApp {
       _1559: (x0,x1) => { x0.lastIndex = x1 },
       _1560: (o, p) => p in o,
       _1561: (o, p) => o[p],
+      _1578: () => new AbortController(),
+      _1579: x0 => x0.abort(),
+      _1580: (x0,x1,x2,x3,x4,x5) => ({method: x0,headers: x1,body: x2,credentials: x3,redirect: x4,signal: x5}),
+      _1581: (x0,x1) => globalThis.fetch(x0,x1),
+      _1582: (x0,x1) => x0.get(x1),
+      _1583: (module,f) => finalizeWrapper(f, function(x0,x1,x2) { return module.exports._1583(f,arguments.length,x0,x1,x2) }),
+      _1584: (x0,x1) => x0.forEach(x1),
+      _1585: x0 => x0.getReader(),
+      _1586: x0 => x0.cancel(),
+      _1587: x0 => x0.read(),
       _1588: o => o instanceof Array,
       _1592: a => a.pop(),
       _1593: (a, i) => a.splice(i, 1),
       _1594: (a, s) => a.join(s),
       _1595: (a, s, e) => a.slice(s, e),
+      _1597: (a, b) => a == b ? 0 : (a > b ? 1 : -1),
       _1598: a => a.length,
       _1600: (a, i) => a[i],
       _1601: (a, i, v) => a[i] = v,
@@ -776,15 +799,27 @@ class CompiledApp {
       _4011: x0 => x0.userAgent,
       _4062: x0 => x0.data,
       _4065: x0 => x0.source,
+      _6166: x0 => x0.signal,
       _6223: x0 => x0.baseURI,
       _6224: x0 => x0.isConnected,
       _6240: () => globalThis.document,
       _6654: (x0,x1) => { x0.id = x1 },
+      _8000: x0 => x0.value,
+      _8002: x0 => x0.done,
+      _8703: x0 => x0.url,
+      _8705: x0 => x0.status,
+      _8707: x0 => x0.statusText,
+      _8708: x0 => x0.headers,
+      _8709: x0 => x0.body,
       _10791: (x0,x1) => { x0.backgroundColor = x1 },
       _10837: (x0,x1) => { x0.border = x1 },
+      _11115: (x0,x1) => { x0.display = x1 },
       _11279: (x0,x1) => { x0.height = x1 },
+      _11545: (x0,x1) => { x0.overscrollBehavior = x1 },
       _11603: (x0,x1) => { x0.pointerEvents = x1 },
+      _11899: (x0,x1) => { x0.touchAction = x1 },
       _11969: (x0,x1) => { x0.width = x1 },
+      _12337: x0 => x0.name,
 
     };
 
