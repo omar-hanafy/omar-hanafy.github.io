@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://omar-hanafy.github.io
+Sitemap: https://omar-hanafy.github.io/sitemap.xml

@@ -1,0 +1,34 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  role="img"
+  aria-label="OH"
+>
+  <defs>
+    <linearGradient id="ohGradient" x1="24" y1="32" x2="232" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4F46E5" />
+      <stop offset="1" stop-color="#10B981" />
+    </linearGradient>
+  </defs>
+
+  <rect x="16" y="16" width="224" height="224" rx="56" fill="#020617" />
+  <rect
+    x="22"
+    y="22"
+    width="212"
+    height="212"
+    rx="52"
+    fill="none"
+    stroke="url(#ohGradient)"
+    stroke-width="12"
+  />
+
+  <!-- O (donut for small-size legibility) -->
+  <circle cx="100" cy="128" r="44" fill="#F8FAFC" />
+  <circle cx="100" cy="128" r="22" fill="#020617" />
+
+  <!-- H -->
+  <rect x="148" y="84" width="16" height="88" rx="6" fill="#F8FAFC" />
+  <rect x="184" y="84" width="16" height="88" rx="6" fill="#F8FAFC" />
+  <rect x="148" y="120" width="52" height="16" rx="6" fill="#F8FAFC" />
+</svg>
