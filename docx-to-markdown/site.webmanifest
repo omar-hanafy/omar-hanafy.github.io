@@ -1,0 +1,27 @@
+{
+  "name": "DOCX to Markdown",
+  "short_name": "docx2md",
+  "description": "Convert Word .docx files to clean Markdown, entirely in your browser.",
+  "start_url": "/docx-to-markdown/",
+  "display": "standalone",
+  "background_color": "#fbfaf7",
+  "theme_color": "#6d28d9",
+  "icons": [
+    {
+      "src": "/docx-to-markdown/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/docx-to-markdown/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/docx-to-markdown/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
