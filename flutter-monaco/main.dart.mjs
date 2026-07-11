@@ -128,6 +128,12 @@ class CompiledApp {
       _174: (x0,x1) => x0.item(x1),
       _175: x0 => x0.next(),
       _176: x0 => x0.now(),
+      _177: (x0,x1) => x0.revokeObjectURL(x1),
+      _178: x0 => x0.close(),
+      _179: (x0,x1,x2,x3,x4) => ({type: x0,data: x1,premultiplyAlpha: x2,colorSpaceConversion: x3,preferAnimation: x4}),
+      _180: x0 => new window.ImageDecoder(x0),
+      _181: (x0,x1) => ({frameIndex: x0,completeFramesOnly: x1}),
+      _182: (x0,x1) => x0.decode(x1),
       _183: (module,f) => finalizeWrapper(f, function(x0) { return module.exports._183(f,arguments.length,x0) }),
       _184: (x0,x1,x2,x3) => x0.addEventListener(x1,x2,x3),
       _186: (x0,x1) => x0.getModifierState(x1),
@@ -179,6 +185,7 @@ class CompiledApp {
       _687: x0 => x0.visualViewport,
       _688: x0 => x0.performance,
       _689: x0 => x0.parent,
+      _691: x0 => x0.URL,
       _693: (x0,x1) => x0.getComputedStyle(x1),
       _694: x0 => x0.screen,
       _695: (module,f) => finalizeWrapper(f, function(x0) { return module.exports._695(f,arguments.length,x0) }),
@@ -189,6 +196,7 @@ class CompiledApp {
       _704: () => globalThis.window,
       _705: () => globalThis.Intl,
       _706: () => globalThis.Symbol,
+      _707: (x0,x1,x2,x3,x4) => globalThis.createImageBitmap(x0,x1,x2,x3,x4),
       _709: x0 => x0.clipboard,
       _710: x0 => x0.maxTouchPoints,
       _711: x0 => x0.vendor,
@@ -255,6 +263,12 @@ class CompiledApp {
       _820: (x0,x1) => { x0.name = x1 },
       _821: x0 => x0.content,
       _822: (x0,x1) => { x0.content = x1 },
+      _826: (x0,x1) => { x0.src = x1 },
+      _827: x0 => x0.naturalWidth,
+      _828: x0 => x0.naturalHeight,
+      _832: (x0,x1) => { x0.crossOrigin = x1 },
+      _834: (x0,x1) => { x0.decoding = x1 },
+      _835: x0 => x0.decode(),
       _840: (x0,x1) => { x0.nonce = x1 },
       _845: (x0,x1) => { x0.width = x1 },
       _847: (x0,x1) => { x0.height = x1 },
@@ -268,6 +282,7 @@ class CompiledApp {
       _928: x0 => x0.read(),
       _929: x0 => x0.value,
       _930: x0 => x0.done,
+      _937: x0 => x0.name,
       _938: x0 => x0.x,
       _939: x0 => x0.y,
       _942: x0 => x0.top,
@@ -305,6 +320,8 @@ class CompiledApp {
       _992: x0 => x0.search,
       _993: x0 => x0.hash,
       _997: x0 => x0.state,
+      _1000: (x0,x1) => x0.createObjectURL(x1),
+      _1002: x0 => new Blob(x0),
       _1012: x0 => x0.matches,
       _1016: x0 => x0.matches,
       _1020: x0 => x0.relatedTarget,
@@ -392,20 +409,32 @@ class CompiledApp {
       _1221: (module,f) => finalizeWrapper(f, function(x0,x1) { return module.exports._1221(f,arguments.length,x0,x1) }),
       _1222: x0 => new Promise(x0),
       _1223: x0 => x0.length,
-      _1297: x0 => globalThis.URL.revokeObjectURL(x0),
-      _1298: (module,f) => finalizeWrapper(f, function(x0) { return module.exports._1298(f,arguments.length,x0) }),
-      _1299: (x0,x1,x2) => x0.addEventListener(x1,x2),
-      _1300: (x0,x1) => x0.closest(x1),
-      _1301: x0 => x0.blur(),
-      _1302: (x0,x1) => x0.hasAttribute(x1),
-      _1303: x0 => ({preventScroll: x0}),
-      _1304: (x0,x1) => x0.focus(x1),
-      _1305: x0 => ({type: x0}),
-      _1306: (x0,x1) => new Blob(x0,x1),
-      _1307: x0 => globalThis.URL.createObjectURL(x0),
-      _1308: (x0,x1,x2) => x0.removeEventListener(x1,x2),
-      _1309: x0 => x0.remove(),
-      _1313: (x0,x1) => x0.createElement(x1),
+      _1224: () => globalThis.window.ImageDecoder,
+      _1225: x0 => x0.tracks,
+      _1227: x0 => x0.completed,
+      _1229: x0 => x0.image,
+      _1235: x0 => x0.displayWidth,
+      _1236: x0 => x0.displayHeight,
+      _1237: x0 => x0.duration,
+      _1240: x0 => x0.ready,
+      _1241: x0 => x0.selectedTrack,
+      _1242: x0 => x0.repetitionCount,
+      _1243: x0 => x0.frameCount,
+      _1285: (x0,x1,x2) => x0.removeEventListener(x1,x2),
+      _1286: x0 => x0.remove(),
+      _1287: (x0,x1) => x0.createElement(x1),
+      _1291: (x0,x1,x2) => x0.addEventListener(x1,x2),
+      _1293: x0 => globalThis.URL.revokeObjectURL(x0),
+      _1294: (module,f) => finalizeWrapper(f, function(x0) { return module.exports._1294(f,arguments.length,x0) }),
+      _1295: (x0,x1) => x0.closest(x1),
+      _1296: x0 => x0.blur(),
+      _1297: (x0,x1) => x0.hasAttribute(x1),
+      _1298: x0 => ({preventScroll: x0}),
+      _1299: (x0,x1) => x0.focus(x1),
+      _1300: x0 => ({type: x0}),
+      _1301: (x0,x1) => new Blob(x0,x1),
+      _1302: x0 => globalThis.URL.createObjectURL(x0),
+      _1321: (x0,x1,x2,x3) => x0.open(x1,x2,x3),
       _1333: Date.now,
       _1335: s => new Date(s * 1000).getTimezoneOffset() * 60,
       _1336: s => {
@@ -417,6 +446,18 @@ class CompiledApp {
       _1337: () => typeof dartUseDateNowForTicks !== "undefined",
       _1338: () => 1000 * performance.now(),
       _1339: () => Date.now(),
+      _1340: () => {
+        // On browsers return `globalThis.location.href`
+        if (globalThis.location != null) {
+          return globalThis.location.href;
+        }
+        return null;
+      },
+      _1341: () => {
+        return typeof process != "undefined" &&
+               Object.prototype.toString.call(process) == "[object process]" &&
+               process.platform == "win32"
+      },
       _1342: () => new WeakMap(),
       _1343: (map, o) => map.get(o),
       _1344: (map, o, v) => map.set(o, v),
@@ -431,6 +472,7 @@ class CompiledApp {
         return 2;
       },
       _1360: (o, p, r) => o.replaceAll(p, () => r),
+      _1361: (o, p, r) => o.replace(p, () => r),
       _1362: Function.prototype.call.bind(String.prototype.toLowerCase),
       _1363: s => s.toUpperCase(),
       _1364: s => s.trim(),
@@ -462,9 +504,12 @@ class CompiledApp {
       _1496: (ms, c) =>
       setTimeout(() => dartInstance.exports.$invokeCallback(c),ms),
       _1497: (handle) => clearTimeout(handle),
+      _1498: (ms, c) =>
+      setInterval(() => dartInstance.exports.$invokeCallback(c), ms),
       _1499: (handle) => clearInterval(handle),
       _1500: (c) =>
       queueMicrotask(() => dartInstance.exports.$invokeCallback(c)),
+      _1501: () => Date.now(),
       _1502: () => new Error().stack,
       _1503: (exn) => {
         let stackString = exn.toString();
@@ -518,6 +563,7 @@ class CompiledApp {
             constructor, [null, ...args]);
         return new factoryFunction();
       },
+      _1531: (o, p) => p in o,
       _1532: (o, p) => o[p],
       _1533: (o, p, v) => o[p] = v,
       _1534: (o, m, a) => o[m].apply(o, a),
@@ -576,6 +622,18 @@ class CompiledApp {
           setValue(wasmArray, wasmArrayOffset + i, jsArray[jsArrayOffset + i]);
         }
       },
+      _1548: (jsArray, jsArrayOffset, wasmArray, wasmArrayOffset, length) => {
+        const getValue = dartInstance.exports.$wasmI16ArrayGet;
+        for (let i = 0; i < length; i++) {
+          jsArray[jsArrayOffset + i] = getValue(wasmArray, wasmArrayOffset + i);
+        }
+      },
+      _1549: (jsArray, jsArrayOffset, wasmArray, wasmArrayOffset, length) => {
+        const setValue = dartInstance.exports.$wasmI16ArraySet;
+        for (let i = 0; i < length; i++) {
+          setValue(wasmArray, wasmArrayOffset + i, jsArray[jsArrayOffset + i]);
+        }
+      },
       _1550: (jsArray, jsArrayOffset, wasmArray, wasmArrayOffset, length) => {
         const getValue = dartInstance.exports.$wasmI32ArrayGet;
         for (let i = 0; i < length; i++) {
@@ -620,6 +678,7 @@ class CompiledApp {
         return s;
       },
       _1559: x0 => x0.index,
+      _1560: x0 => x0.groups,
       _1561: x0 => x0.flags,
       _1562: x0 => x0.multiline,
       _1563: x0 => x0.ignoreCase,
@@ -628,11 +687,22 @@ class CompiledApp {
       _1566: (x0,x1) => { x0.lastIndex = x1 },
       _1567: (o, p) => p in o,
       _1568: (o, p) => o[p],
+      _1585: () => new AbortController(),
+      _1586: x0 => x0.abort(),
+      _1587: (x0,x1,x2,x3,x4,x5) => ({method: x0,headers: x1,body: x2,credentials: x3,redirect: x4,signal: x5}),
+      _1588: (x0,x1) => globalThis.fetch(x0,x1),
+      _1589: (x0,x1) => x0.get(x1),
+      _1590: (module,f) => finalizeWrapper(f, function(x0,x1,x2) { return module.exports._1590(f,arguments.length,x0,x1,x2) }),
+      _1591: (x0,x1) => x0.forEach(x1),
+      _1592: x0 => x0.getReader(),
+      _1593: x0 => x0.cancel(),
+      _1594: x0 => x0.read(),
       _1595: o => o instanceof Array,
       _1599: a => a.pop(),
       _1600: (a, i) => a.splice(i, 1),
       _1601: (a, s) => a.join(s),
       _1602: (a, s, e) => a.slice(s, e),
+      _1604: (a, b) => a == b ? 0 : (a > b ? 1 : -1),
       _1605: a => a.length,
       _1607: (a, i) => a[i],
       _1608: (a, i, v) => a[i] = v,
@@ -735,6 +805,7 @@ class CompiledApp {
       _4016: x0 => x0.userAgent,
       _4067: x0 => x0.data,
       _4070: x0 => x0.source,
+      _6171: x0 => x0.signal,
       _6228: x0 => x0.baseURI,
       _6229: x0 => x0.isConnected,
       _6245: () => globalThis.document,
@@ -742,6 +813,13 @@ class CompiledApp {
       _6656: x0 => x0.tagName,
       _6657: x0 => x0.id,
       _6658: (x0,x1) => { x0.id = x1 },
+      _8004: x0 => x0.value,
+      _8006: x0 => x0.done,
+      _8705: x0 => x0.url,
+      _8707: x0 => x0.status,
+      _8709: x0 => x0.statusText,
+      _8710: x0 => x0.headers,
+      _8711: x0 => x0.body,
       _10793: (x0,x1) => { x0.backgroundColor = x1 },
       _10839: (x0,x1) => { x0.border = x1 },
       _11117: (x0,x1) => { x0.display = x1 },
@@ -750,6 +828,7 @@ class CompiledApp {
       _11605: (x0,x1) => { x0.pointerEvents = x1 },
       _11901: (x0,x1) => { x0.touchAction = x1 },
       _11971: (x0,x1) => { x0.width = x1 },
+      _12339: x0 => x0.name,
 
     };
 
