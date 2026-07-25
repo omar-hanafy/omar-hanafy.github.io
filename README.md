@@ -4,7 +4,7 @@ Hello there! I'm Omar Hanafy, a software developer with a focus on Flutter and D
 
 ## Projects
 
-### [Flutter Monaco](./flutter-monaco)
+### [Flutter Monaco](https://omar-hanafy.github.io/flutter_monaco/)
 
 - Live demo for the [flutter_monaco](https://pub.dev/packages/flutter_monaco) package - embed Monaco, the editor that powers VS Code, inside your Flutter app. Try the playground with 100+ languages, theming, IntelliSense, and live diagnostics.
 
