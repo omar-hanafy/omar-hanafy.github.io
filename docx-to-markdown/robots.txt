@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://omar-hanafy.github.io/docx-to-markdown/sitemap-index.xml
